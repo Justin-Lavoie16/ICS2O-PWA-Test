@@ -1,7 +1,7 @@
 ;("use strict")
 
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/Justin-Lavoie16/ICS2O-PWA-Test", {
+  navigator.serviceWorker.register("/ICS2O-PWA-Test/", {
     scope: "/ICS2O-PWA-Test/",
   })
 }
