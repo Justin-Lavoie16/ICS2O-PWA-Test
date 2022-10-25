@@ -1,23 +1,21 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
-//
-// Created by: Mr. Coxall
-// Created on: Sep 2020
-// This file contains the JS functions for index.html
+;("use strict")
 
-"use strict"
-
-/**
- * Check servie worker.
- */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
+  navigator.serviceWorker.register("/Justin-Lavoie16/ICS2O-PWA-Test", {
     scope: "/ICS2O-PWA-Test/",
   })
 }
 
-/**
- * This function displays an alert.
- */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+function calculate() {
+  const length = parseInt(document.getElementById("pay").value)
+  const width = parseInt(document.getElementById("pay2").value)
+
+  const area = length * width * 0.18
+  const perimeter = length * width * (1.0 - 0.18)
+  const TAX_RATE = 0.18
+
+  document.getElementById("area").innerHTML =
+    "The governemnt will take: " + area + "$"
+  document.getElementById("perimeter").innerHTML =
+    "your pay will be: " + perimeter + "$"
 }
